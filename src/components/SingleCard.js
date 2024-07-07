@@ -13,7 +13,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
 				<img className="front" src={card.src} alt="card front" />
 				<img 
 					onClick={handleClick} 
-					src="/img/back.png" 
+					src="/react-memory-game/img/back.png" 
 					alt="card back" 
 					className="back" />
 			</div>
