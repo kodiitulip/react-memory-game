@@ -1,14 +1,41 @@
 .App {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 10px;
+	gap: 10px;
+	position: relative;
+	min-height: 96vh;
+}
+
+.App > .left {
+	margin: 10px auto;
+	order: 0;
+	flex-grow: 1;
+}
+
+.App > .center {
 	max-width: 860px;
-	margin: 20px auto;
+	margin: 10px auto;
+	order: 1;
+	flex-grow: 1;
+}
+
+.App > .right {
+	margin: 10px auto;
+	order: 2;
+	flex-grow: 1;
+	height: 100%;
 }
 
 button {
+	transition: all 0.5s ease;
 	font-family: Pixelify Sans, sans-serif;
 	background: none;
-	border: 2px solid #fff;
 	padding: 6px 12px;
 	border-radius: 4px;
+	border: none;
+	background: #221e31;
 	color: #fff;
 	font-weight: bold;
 	cursor: pointer;
@@ -16,28 +43,109 @@ button {
 }
 
 button:hover {
+	transition: all 0.5s ease;
 	background: #c23866;
 	color: #fff;
 }
 
 .card-grid {
+	transition: all 0.5s ease;
 	margin-top: 40px;
 	margin-left: 20px;
 	margin-right: 20px;
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 10px;
 }
 
+/* Phone css */
+
 @media screen and (max-width: 460px) {
 	.card-grid {
-		grid-template-columns: 1fr 1fr 1fr;
+		transition: all 0.5s ease;
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.App {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+	}
+
+	.App > .right {
+		margin: 4px auto;
+	}
+
+	.App > .left {
+		margin: 4px auto;
 	}
 }
 
+/* Smaller height screen */
+
 @media screen and (max-height: 800px) {
 	.card-grid {
-		margin-left: 200px;
-		margin-right: 200px;
+		transition: all 0.5s ease;
+		margin-left: 220px;
+		margin-right: 220px;
 	}
 }
+
+/* 
+* Desktop - 1 *
+
+* Auto layout *
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px;
+gap: 10px;
+
+position: relative;
+width: 1368px;
+height: 728px;
+
+background: #FFFFFF;
+
+
+* Frame 5 *
+
+width: 234px;
+height: 708px;
+
+background: #6A9846;
+
+* Inside auto layout *
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 1;
+
+
+* Frame 4 *
+
+width: 860px;
+max-width: 860px;
+height: 708px;
+
+background: #CA2B2B;
+
+* Inside auto layout *
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+
+
+* Frame 6 *
+
+width: 234px;
+height: 708px;
+
+background: #6A9846;
+
+* Inside auto layout *
+flex: none;
+order: 2;
+align-self: stretch;
+flex-grow: 1; */
