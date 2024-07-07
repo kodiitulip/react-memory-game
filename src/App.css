@@ -1,31 +1,6 @@
 .App {
-	display: flex;
-	flex-direction: row;
-	align-items: flex-start;
-	padding: 10px;
-	gap: 10px;
-	position: relative;
-	min-height: 96vh;
-}
-
-.App > .left {
-	margin: 10px auto;
-	order: 0;
-	flex-grow: 1;
-}
-
-.App > .center {
 	max-width: 860px;
 	margin: 10px auto;
-	order: 1;
-	flex-grow: 1;
-}
-
-.App > .right {
-	margin: 10px auto;
-	order: 2;
-	flex-grow: 1;
-	height: 100%;
 }
 
 button {
@@ -40,19 +15,18 @@ button {
 	font-weight: bold;
 	cursor: pointer;
 	font-size: 1em;
+	margin-bottom: 20px;
 }
 
 button:hover {
-	transition: all 0.5s ease;
+	transition-delay: 0.5s;
 	background: #c23866;
 	color: #fff;
 }
 
 .card-grid {
 	transition: all 0.5s ease;
-	margin-top: 40px;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin: 0px 220px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	grid-gap: 10px;
@@ -60,92 +34,15 @@ button:hover {
 
 /* Phone css */
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 680px) {
 	.card-grid {
-		transition: all 0.5s ease;
+		transition-delay: 0.5s;
+		margin: 0px 40px;
 		grid-template-columns: repeat(3, 1fr);
 	}
 
-	.App {
-		display: flex;
-		flex-direction: column;
-		gap: 5px;
-	}
-
-	.App > .right {
-		margin: 4px auto;
-	}
-
-	.App > .left {
-		margin: 4px auto;
+	body {
+		transition: all ease 0.5s;
+		font-size: 1em;
 	}
 }
-
-/* Smaller height screen */
-
-@media screen and (max-height: 800px) {
-	.card-grid {
-		transition: all 0.5s ease;
-		margin-left: 220px;
-		margin-right: 220px;
-	}
-}
-
-/* 
-* Desktop - 1 *
-
-* Auto layout *
-display: flex;
-flex-direction: row;
-align-items: flex-start;
-padding: 10px;
-gap: 10px;
-
-position: relative;
-width: 1368px;
-height: 728px;
-
-background: #FFFFFF;
-
-
-* Frame 5 *
-
-width: 234px;
-height: 708px;
-
-background: #6A9846;
-
-* Inside auto layout *
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 1;
-
-
-* Frame 4 *
-
-width: 860px;
-max-width: 860px;
-height: 708px;
-
-background: #CA2B2B;
-
-* Inside auto layout *
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-
-
-* Frame 6 *
-
-width: 234px;
-height: 708px;
-
-background: #6A9846;
-
-* Inside auto layout *
-flex: none;
-order: 2;
-align-self: stretch;
-flex-grow: 1; */

@@ -2,13 +2,15 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
 
+export const homepage = "react-memory-game";
+
 const cardImages = [
-	{ "src": "/react-memory-game/img/sword.png", matched: false },
-	{ "src": "/react-memory-game/img/shield.png", matched: false },
-	{ "src": "/react-memory-game/img/skull.png", matched: false },
-	{ "src": "/react-memory-game/img/elixir.png", matched: false },
-	{ "src": "/react-memory-game/img/ring.png", matched: false },
-	{ "src": "/react-memory-game/img/scroll.png", matched: false },
+	{ "src": `${homepage}/img/sword.png`, matched: false },
+	{ "src": `${homepage}/img/shield.png`, matched: false },
+	{ "src": `${homepage}/img/skull.png`, matched: false },
+	{ "src": `${homepage}/img/elixir.png`, matched: false },
+	{ "src": `${homepage}/img/ring.png`, matched: false },
+	{ "src": `${homepage}/img/scroll.png`, matched: false },
 ];
 
 function App() {
@@ -74,8 +76,6 @@ function App() {
 
 	return (
 		<div className="App">
-			<div className="left"></div>
-			<div className="center">
 			<h1>Dungeon Match</h1>
 			<button onClick={shuffleCards}>New Game</button>
 			<div className="card-grid">
@@ -90,8 +90,6 @@ function App() {
 				))}
 			</div>
 			<p>Turns: {turns}</p>
-			</div>
-			<div className="right"></div>
 		</div>
 	);
 }
