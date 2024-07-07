@@ -1,4 +1,3 @@
-import { homepage } from "../App";
 import "./SingleCard.css"
 
 export default function SingleCard({ card, handleChoice, flipped, disabled }) {
@@ -14,7 +13,7 @@ export default function SingleCard({ card, handleChoice, flipped, disabled }) {
 				<img className="front" src={card.src} alt="card front" />
 				<img 
 					onClick={handleClick} 
-					src={`${homepage}/img/back.png`} 
+					src="img/back.png" 
 					alt="card back" 
 					className="back" />
 			</div>

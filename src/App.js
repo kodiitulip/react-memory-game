@@ -2,15 +2,13 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import SingleCard from './components/SingleCard';
 
-export const homepage = "react-memory-game";
-
 const cardImages = [
-	{ "src": `${homepage}/img/sword.png`, matched: false },
-	{ "src": `${homepage}/img/shield.png`, matched: false },
-	{ "src": `${homepage}/img/skull.png`, matched: false },
-	{ "src": `${homepage}/img/elixir.png`, matched: false },
-	{ "src": `${homepage}/img/ring.png`, matched: false },
-	{ "src": `${homepage}/img/scroll.png`, matched: false },
+	{ "src": "img/sword.png", matched: false },
+	{ "src": "img/shield.png", matched: false },
+	{ "src": "img/skull.png", matched: false },
+	{ "src": "img/elixir.png", matched: false },
+	{ "src": "img/ring.png", matched: false },
+	{ "src": "img/scroll.png", matched: false },
 ];
 
 function App() {
@@ -58,8 +56,6 @@ function App() {
 			setTimeout(() => resetTurn(), 1000);
 		}
 	}, [choiceOne, choiceTwo])
-
-	console.log(cards);
 
 	// reset turns
 	const resetTurn = () => {
